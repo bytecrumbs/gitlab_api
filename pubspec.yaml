@@ -1,8 +1,7 @@
 name: gitlab_api
 description: Package project for GitLab API
 version: 0.0.1
-author:
-homepage:
+homepage: https://github.com/bytecrumbs/gitlab_api
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
