@@ -5,7 +5,6 @@ void main() {
   group('GitLab -', () {
     test('Should use default Gitlab host', () {
       var gitLabApi = GitLab(token: '123');
-
       expect(gitLabApi.host, 'gitlab.com');
     });
   });
