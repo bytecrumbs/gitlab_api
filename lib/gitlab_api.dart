@@ -1,6 +1,6 @@
 library gitlab_api;
 
-import 'package:flutter/foundation.dart';
+import 'package:meta/meta.dart';
 
 class GitLabApi {
   final String token;
