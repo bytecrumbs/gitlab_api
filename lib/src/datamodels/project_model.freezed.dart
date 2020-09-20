@@ -9,6 +9,7 @@ part of 'project_model.dart';
 
 T _$identity<T>(T value) => value;
 
+/// @nodoc
 class _$ProjectModelTearOff {
   const _$ProjectModelTearOff();
 
@@ -22,9 +23,11 @@ class _$ProjectModelTearOff {
   }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $ProjectModel = _$ProjectModelTearOff();
 
+/// @nodoc
 mixin _$ProjectModel {
   int get id;
   String get description;
@@ -33,6 +36,7 @@ mixin _$ProjectModel {
   $ProjectModelCopyWith<ProjectModel> get copyWith;
 }
 
+/// @nodoc
 abstract class $ProjectModelCopyWith<$Res> {
   factory $ProjectModelCopyWith(
           ProjectModel value, $Res Function(ProjectModel) then) =
@@ -40,6 +44,7 @@ abstract class $ProjectModelCopyWith<$Res> {
   $Res call({int id, String description, String name});
 }
 
+/// @nodoc
 class _$ProjectModelCopyWithImpl<$Res> implements $ProjectModelCopyWith<$Res> {
   _$ProjectModelCopyWithImpl(this._value, this._then);
 
@@ -62,6 +67,7 @@ class _$ProjectModelCopyWithImpl<$Res> implements $ProjectModelCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$ProjectModelCopyWith<$Res>
     implements $ProjectModelCopyWith<$Res> {
   factory _$ProjectModelCopyWith(
@@ -71,6 +77,7 @@ abstract class _$ProjectModelCopyWith<$Res>
   $Res call({int id, String description, String name});
 }
 
+/// @nodoc
 class __$ProjectModelCopyWithImpl<$Res> extends _$ProjectModelCopyWithImpl<$Res>
     implements _$ProjectModelCopyWith<$Res> {
   __$ProjectModelCopyWithImpl(
@@ -95,6 +102,7 @@ class __$ProjectModelCopyWithImpl<$Res> extends _$ProjectModelCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_ProjectModel implements _ProjectModel {
   _$_ProjectModel({this.id, this.description, this.name});
 
