@@ -1,3 +1,4 @@
+import 'package:gitlab_api/src/groups_api.dart';
 import 'package:gitlab_api/src/projects_api.dart';
 import 'package:meta/meta.dart';
 
@@ -13,6 +14,7 @@ class GitLab {
   });
 
   ProjectsApi projects() => ProjectsApi(this);
+  GroupsApi groups() => GroupsApi(this);
 
   String buildUrl() {
     return '$_urlScheme://$host/api/$_gitLabApiVersion';
