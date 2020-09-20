@@ -4,10 +4,14 @@ import 'package:test/test.dart';
 
 void main() {
   group('GitLab -', () {
-    group('Host -', () {
+    group('URL -', () {
       test('Should use default Gitlab host', () {
         var gitLabApi = GitLab(token: '123');
         expect(gitLabApi.host, 'gitlab.com');
+      });
+      test('Should return full URL', () {
+        var gitLabApi = GitLab(token: '123');
+        expect(gitLabApi.buildUrl(), 'https://gitlab.com/api/v4');
       });
     });
     group('Projects -', () {
