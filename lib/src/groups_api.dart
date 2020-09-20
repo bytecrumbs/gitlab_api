@@ -6,6 +6,4 @@ class GroupsApi {
 
   GroupsApi(this._gitLab);
   List<GroupModel> projectList() => [GroupModel(), GroupModel()];
-
-  String buildUrl() => _gitLab.buildUrl();
 }

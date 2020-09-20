@@ -12,7 +12,7 @@ void main() {
       });
       test('Should return full URL', () {
         var gitLabApi = GitLab(token: '123');
-        expect(gitLabApi.buildUrl(), 'https://gitlab.com/api/v4');
+        expect(gitLabApi.buildUrl().toString(), 'https://gitlab.com/api/v4');
       });
     });
     group('Projects -', () {
