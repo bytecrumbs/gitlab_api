@@ -8,6 +8,9 @@ part of 'group_model.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+GroupModel _$GroupModelFromJson(Map<String, dynamic> json) {
+  return _GroupModel.fromJson(json);
+}
 
 /// @nodoc
 class _$GroupModelTearOff {
@@ -46,6 +49,11 @@ class _$GroupModelTearOff {
       file_template_project_id: file_template_project_id,
     );
   }
+
+// ignore: unused_element
+  GroupModel fromJson(Map<String, Object> json) {
+    return GroupModel.fromJson(json);
+  }
 }
 
 /// @nodoc
@@ -69,6 +77,7 @@ mixin _$GroupModel {
   String get full_path;
   int get file_template_project_id;
 
+  Map<String, dynamic> toJson();
   $GroupModelCopyWith<GroupModel> get copyWith;
 }
 
@@ -235,6 +244,8 @@ class __$GroupModelCopyWithImpl<$Res> extends _$GroupModelCopyWithImpl<$Res>
   }
 }
 
+@JsonSerializable()
+
 /// @nodoc
 class _$_GroupModel implements _GroupModel {
   _$_GroupModel(
@@ -252,6 +263,9 @@ class _$_GroupModel implements _GroupModel {
       this.full_name,
       this.full_path,
       this.file_template_project_id});
+
+  factory _$_GroupModel.fromJson(Map<String, dynamic> json) =>
+      _$_$_GroupModelFromJson(json);
 
   @override
   final int id;
@@ -355,6 +369,11 @@ class _$_GroupModel implements _GroupModel {
   @override
   _$GroupModelCopyWith<_GroupModel> get copyWith =>
       __$GroupModelCopyWithImpl<_GroupModel>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$_$_GroupModelToJson(this);
+  }
 }
 
 abstract class _GroupModel implements GroupModel {
@@ -373,6 +392,9 @@ abstract class _GroupModel implements GroupModel {
       String full_name,
       String full_path,
       int file_template_project_id}) = _$_GroupModel;
+
+  factory _GroupModel.fromJson(Map<String, dynamic> json) =
+      _$_GroupModel.fromJson;
 
   @override
   int get id;

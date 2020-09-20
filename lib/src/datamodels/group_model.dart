@@ -1,6 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'group_model.freezed.dart';
+part 'group_model.g.dart';
 
 @freezed
 abstract class GroupModel with _$GroupModel {
@@ -20,4 +21,7 @@ abstract class GroupModel with _$GroupModel {
     String full_path,
     int file_template_project_id,
   }) = _GroupModel;
+
+  factory GroupModel.fromJson(Map<String, dynamic> json) =>
+      _$GroupModelFromJson(json);
 }
