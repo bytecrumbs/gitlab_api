@@ -1,10 +1,10 @@
 import 'package:gitlab_api/gitlab_api.dart';
 import 'package:gitlab_api/src/datamodels/project_model.dart';
 
-class Projects {
+class ProjectsApi {
   final GitLab _gitLab;
 
-  Projects(this._gitLab);
+  ProjectsApi(this._gitLab);
 
   ProjectModel project(int projectId) => ProjectModel();
 

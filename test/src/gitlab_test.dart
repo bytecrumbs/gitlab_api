@@ -1,5 +1,5 @@
 import 'package:gitlab_api/gitlab_api.dart';
-import 'package:gitlab_api/src/projects.dart';
+import 'package:gitlab_api/src/projects_api.dart';
 import 'package:test/test.dart';
 
 void main() {
@@ -17,7 +17,7 @@ void main() {
     group('Projects -', () {
       test('Should return an instance of Projects', () {
         var gitLabApi = GitLab(token: '123');
-        expect(gitLabApi.projects(), isA<Projects>());
+        expect(gitLabApi.projects(), isA<ProjectsApi>());
       });
     });
   });

@@ -1,4 +1,4 @@
-import 'package:gitlab_api/src/projects.dart';
+import 'package:gitlab_api/src/projects_api.dart';
 import 'package:meta/meta.dart';
 
 class GitLab {
@@ -12,7 +12,7 @@ class GitLab {
     this.host = 'gitlab.com',
   });
 
-  Projects projects() => Projects(this);
+  ProjectsApi projects() => ProjectsApi(this);
 
   String buildUrl() {
     return '$_urlScheme://$host/api/$_gitLabApiVersion';
