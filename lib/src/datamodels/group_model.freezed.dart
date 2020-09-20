@@ -9,6 +9,7 @@ part of 'group_model.dart';
 
 T _$identity<T>(T value) => value;
 
+/// @nodoc
 class _$GroupModelTearOff {
   const _$GroupModelTearOff();
 
@@ -47,9 +48,11 @@ class _$GroupModelTearOff {
   }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $GroupModel = _$GroupModelTearOff();
 
+/// @nodoc
 mixin _$GroupModel {
   int get id;
   String get name;
@@ -69,6 +72,7 @@ mixin _$GroupModel {
   $GroupModelCopyWith<GroupModel> get copyWith;
 }
 
+/// @nodoc
 abstract class $GroupModelCopyWith<$Res> {
   factory $GroupModelCopyWith(
           GroupModel value, $Res Function(GroupModel) then) =
@@ -90,6 +94,7 @@ abstract class $GroupModelCopyWith<$Res> {
       int file_template_project_id});
 }
 
+/// @nodoc
 class _$GroupModelCopyWithImpl<$Res> implements $GroupModelCopyWith<$Res> {
   _$GroupModelCopyWithImpl(this._value, this._then);
 
@@ -147,6 +152,7 @@ class _$GroupModelCopyWithImpl<$Res> implements $GroupModelCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$GroupModelCopyWith<$Res> implements $GroupModelCopyWith<$Res> {
   factory _$GroupModelCopyWith(
           _GroupModel value, $Res Function(_GroupModel) then) =
@@ -169,6 +175,7 @@ abstract class _$GroupModelCopyWith<$Res> implements $GroupModelCopyWith<$Res> {
       int file_template_project_id});
 }
 
+/// @nodoc
 class __$GroupModelCopyWithImpl<$Res> extends _$GroupModelCopyWithImpl<$Res>
     implements _$GroupModelCopyWith<$Res> {
   __$GroupModelCopyWithImpl(
@@ -228,6 +235,7 @@ class __$GroupModelCopyWithImpl<$Res> extends _$GroupModelCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_GroupModel implements _GroupModel {
   _$_GroupModel(
       {this.id,
