@@ -1,11 +1,12 @@
 import 'package:gitlab_api/gitlab_api.dart';
+import 'package:gitlab_api/src/datamodels/project_model.dart';
 
 class Projects {
   final GitLab _gitLab;
 
   Projects(this._gitLab);
 
-  String project(int projectId) => 'Project ID: $projectId';
+  ProjectModel project(int projectId) => ProjectModel();
 
-  List<String> projectList() => ['asfd', 'sdfg'];
+  List<ProjectModel> projectList() => [ProjectModel(), ProjectModel()];
 }
