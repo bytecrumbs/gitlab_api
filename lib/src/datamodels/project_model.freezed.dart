@@ -8,6 +8,9 @@ part of 'project_model.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+ProjectModel _$ProjectModelFromJson(Map<String, dynamic> json) {
+  return _ProjectModel.fromJson(json);
+}
 
 /// @nodoc
 class _$ProjectModelTearOff {
@@ -21,6 +24,11 @@ class _$ProjectModelTearOff {
       name: name,
     );
   }
+
+// ignore: unused_element
+  ProjectModel fromJson(Map<String, Object> json) {
+    return ProjectModel.fromJson(json);
+  }
 }
 
 /// @nodoc
@@ -33,6 +41,7 @@ mixin _$ProjectModel {
   String get description;
   String get name;
 
+  Map<String, dynamic> toJson();
   $ProjectModelCopyWith<ProjectModel> get copyWith;
 }
 
@@ -102,9 +111,14 @@ class __$ProjectModelCopyWithImpl<$Res> extends _$ProjectModelCopyWithImpl<$Res>
   }
 }
 
+@JsonSerializable()
+
 /// @nodoc
 class _$_ProjectModel implements _ProjectModel {
   _$_ProjectModel({this.id, this.description, this.name});
+
+  factory _$_ProjectModel.fromJson(Map<String, dynamic> json) =>
+      _$_$_ProjectModelFromJson(json);
 
   @override
   final int id;
@@ -141,11 +155,19 @@ class _$_ProjectModel implements _ProjectModel {
   @override
   _$ProjectModelCopyWith<_ProjectModel> get copyWith =>
       __$ProjectModelCopyWithImpl<_ProjectModel>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$_$_ProjectModelToJson(this);
+  }
 }
 
 abstract class _ProjectModel implements ProjectModel {
   factory _ProjectModel({int id, String description, String name}) =
       _$_ProjectModel;
+
+  factory _ProjectModel.fromJson(Map<String, dynamic> json) =
+      _$_ProjectModel.fromJson;
 
   @override
   int get id;
