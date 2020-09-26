@@ -26,14 +26,14 @@ class GitLab {
   ProjectsApi projects() => ProjectsApi(this);
   GroupsApi groups() => GroupsApi(this);
 
-  Uri buildUrl({
+  Uri buildUri({
     Iterable<String> pathSegments,
     Map<String, dynamic> queryParameters,
     int page,
     int perPage,
   }) {
-    if (page != null) queryParameters['page'] = page;
-    if (perPage != null) queryParameters['per_page'] = perPage;
+    if (page != null) queryParameters['page'] = page.toString();
+    if (perPage != null) queryParameters['per_page'] = perPage.toString();
 
     var uri = Uri(
         scheme: _urlScheme,

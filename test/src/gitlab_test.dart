@@ -12,11 +12,36 @@ void main() {
       });
       test('Should return a URL', () {
         var gitLabApi = GitLab(token: '123');
-        expect(
-            gitLabApi.buildUrl(
-              pathSegments: ['custom', 'path'],
-            ).toString(),
-            'https://gitlab.com/api/v4/custom/path');
+        var uri = gitLabApi.buildUri(pathSegments: ['custom', 'path']);
+        expect(uri.toString(), 'https://gitlab.com/api/v4/custom/path');
+      });
+      test('Should return a URL with queryParameters', () {
+        Uri uri;
+
+        var gitLabApi = GitLab(token: '123');
+
+        uri = gitLabApi.buildUri(
+          pathSegments: ['customePath'],
+          queryParameters: {'testPath': 'value'},
+        );
+        expect(uri.toString(),
+            'https://gitlab.com/api/v4/customePath?testPath=value');
+      });
+
+      test(
+          'Should return a URL with queryParameters and pagination info if it is provided',
+          () {
+        Uri uri;
+
+        var gitLabApi = GitLab(token: '123');
+
+        uri = gitLabApi.buildUri(
+            queryParameters: {'query1': 'value'},
+            pathSegments: ['path'],
+            page: 10,
+            perPage: 10);
+        expect(uri.toString(),
+            'https://gitlab.com/api/v4/path?query1=value&page=10&per_page=10');
       });
     });
     group('Projects -', () {

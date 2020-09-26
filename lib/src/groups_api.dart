@@ -24,7 +24,7 @@ class GroupsApi {
       queryParameters['top_level_only'] = top_level_only;
     }
 
-    final uri = _gitLab.buildUrl(
+    final uri = _gitLab.buildUri(
       queryParameters: queryParameters,
       page: page,
       perPage: perPage,
