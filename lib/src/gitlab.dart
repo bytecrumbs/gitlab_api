@@ -10,11 +10,18 @@ class GitLab {
   final String host;
   final String _gitLabApiVersion = 'v4';
   final String _urlScheme = 'https';
+  final http.Client _httpClient;
 
   GitLab({
     @required this.token,
     this.host = 'gitlab.com',
-  });
+  }) : _httpClient = http.Client();
+
+  GitLab._test({
+    @required http.Client httpClient,
+    @required this.token,
+    this.host = 'gitlab.com',
+  }) : _httpClient = httpClient;
 
   ProjectsApi projects() => ProjectsApi(this);
   GroupsApi groups() => GroupsApi(this);
@@ -45,7 +52,7 @@ class GitLab {
 
     // ignore: todo
     //TODO: check method
-    final response = await http.get(uri, headers: headers);
+    final response = await _httpClient.get(uri, headers: headers);
 
     if (!(response.statusCode >= 200 && response.statusCode < 300)) {
       throw Exception(
@@ -55,3 +62,12 @@ class GitLab {
     return jsonDecode(response.body);
   }
 }
+
+GitLab getTestable({
+  @required http.Client httpClient,
+  String token = 'secret-token',
+}) =>
+    GitLab._test(
+      httpClient: httpClient,
+      token: token,
+    );
