@@ -10,9 +10,13 @@ void main() {
         var gitLabApi = GitLab(token: '123');
         expect(gitLabApi.host, 'gitlab.com');
       });
-      test('Should return full URL', () {
+      test('Should return a URL', () {
         var gitLabApi = GitLab(token: '123');
-        expect(gitLabApi.buildUrl().toString(), 'https://gitlab.com/api/v4');
+        expect(
+            gitLabApi.buildUrl(
+              pathSegments: ['custom', 'path'],
+            ).toString(),
+            'https://gitlab.com/api/v4/custom/path');
       });
     });
     group('Projects -', () {

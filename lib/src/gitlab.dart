@@ -20,6 +20,7 @@ class GitLab {
   GroupsApi groups() => GroupsApi(this);
 
   Uri buildUrl({
+    Iterable<String> pathSegments,
     Map<String, dynamic> queryParameters,
     int page,
     int perPage,
@@ -30,7 +31,7 @@ class GitLab {
     var uri = Uri(
         scheme: _urlScheme,
         host: host,
-        pathSegments: ['api', _gitLabApiVersion],
+        pathSegments: ['api', _gitLabApiVersion, ...?pathSegments],
         queryParameters: queryParameters);
 
     return uri;
