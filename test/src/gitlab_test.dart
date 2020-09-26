@@ -5,7 +5,7 @@ import 'package:test/test.dart';
 
 void main() {
   group('GitLab -', () {
-    group('URL -', () {
+    group('URI -', () {
       test('Should use default Gitlab host', () {
         var gitLabApi = GitLab(token: '123');
         expect(gitLabApi.host, 'gitlab.com');
