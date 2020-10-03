@@ -25,6 +25,7 @@ class GroupsApi {
     }
 
     final uri = _gitLab.buildUri(
+      pathSegments: ['groups'],
       queryParameters: queryParameters,
       page: page,
       perPage: perPage,

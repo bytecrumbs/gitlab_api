@@ -23,12 +23,12 @@ class _$GroupModelTearOff {
       String path,
       String description,
       String visibility,
-      String require_two_factor_authentication,
+      bool require_two_factor_authentication,
       String subgroup_creation_level,
       String created_at,
       String descavatar_urlription,
       String web_url,
-      String request_access_enabled,
+      bool request_access_enabled,
       String full_name,
       String full_path,
       int file_template_project_id}) {
@@ -67,12 +67,12 @@ mixin _$GroupModel {
   String get path;
   String get description;
   String get visibility;
-  String get require_two_factor_authentication;
+  bool get require_two_factor_authentication;
   String get subgroup_creation_level;
   String get created_at;
   String get descavatar_urlription;
   String get web_url;
-  String get request_access_enabled;
+  bool get request_access_enabled;
   String get full_name;
   String get full_path;
   int get file_template_project_id;
@@ -92,12 +92,12 @@ abstract class $GroupModelCopyWith<$Res> {
       String path,
       String description,
       String visibility,
-      String require_two_factor_authentication,
+      bool require_two_factor_authentication,
       String subgroup_creation_level,
       String created_at,
       String descavatar_urlription,
       String web_url,
-      String request_access_enabled,
+      bool request_access_enabled,
       String full_name,
       String full_path,
       int file_template_project_id});
@@ -139,7 +139,7 @@ class _$GroupModelCopyWithImpl<$Res> implements $GroupModelCopyWith<$Res> {
       require_two_factor_authentication:
           require_two_factor_authentication == freezed
               ? _value.require_two_factor_authentication
-              : require_two_factor_authentication as String,
+              : require_two_factor_authentication as bool,
       subgroup_creation_level: subgroup_creation_level == freezed
           ? _value.subgroup_creation_level
           : subgroup_creation_level as String,
@@ -151,7 +151,7 @@ class _$GroupModelCopyWithImpl<$Res> implements $GroupModelCopyWith<$Res> {
       web_url: web_url == freezed ? _value.web_url : web_url as String,
       request_access_enabled: request_access_enabled == freezed
           ? _value.request_access_enabled
-          : request_access_enabled as String,
+          : request_access_enabled as bool,
       full_name: full_name == freezed ? _value.full_name : full_name as String,
       full_path: full_path == freezed ? _value.full_path : full_path as String,
       file_template_project_id: file_template_project_id == freezed
@@ -173,12 +173,12 @@ abstract class _$GroupModelCopyWith<$Res> implements $GroupModelCopyWith<$Res> {
       String path,
       String description,
       String visibility,
-      String require_two_factor_authentication,
+      bool require_two_factor_authentication,
       String subgroup_creation_level,
       String created_at,
       String descavatar_urlription,
       String web_url,
-      String request_access_enabled,
+      bool request_access_enabled,
       String full_name,
       String full_path,
       int file_template_project_id});
@@ -222,7 +222,7 @@ class __$GroupModelCopyWithImpl<$Res> extends _$GroupModelCopyWithImpl<$Res>
       require_two_factor_authentication:
           require_two_factor_authentication == freezed
               ? _value.require_two_factor_authentication
-              : require_two_factor_authentication as String,
+              : require_two_factor_authentication as bool,
       subgroup_creation_level: subgroup_creation_level == freezed
           ? _value.subgroup_creation_level
           : subgroup_creation_level as String,
@@ -234,7 +234,7 @@ class __$GroupModelCopyWithImpl<$Res> extends _$GroupModelCopyWithImpl<$Res>
       web_url: web_url == freezed ? _value.web_url : web_url as String,
       request_access_enabled: request_access_enabled == freezed
           ? _value.request_access_enabled
-          : request_access_enabled as String,
+          : request_access_enabled as bool,
       full_name: full_name == freezed ? _value.full_name : full_name as String,
       full_path: full_path == freezed ? _value.full_path : full_path as String,
       file_template_project_id: file_template_project_id == freezed
@@ -278,7 +278,7 @@ class _$_GroupModel implements _GroupModel {
   @override
   final String visibility;
   @override
-  final String require_two_factor_authentication;
+  final bool require_two_factor_authentication;
   @override
   final String subgroup_creation_level;
   @override
@@ -288,7 +288,7 @@ class _$_GroupModel implements _GroupModel {
   @override
   final String web_url;
   @override
-  final String request_access_enabled;
+  final bool request_access_enabled;
   @override
   final String full_name;
   @override
@@ -383,12 +383,12 @@ abstract class _GroupModel implements GroupModel {
       String path,
       String description,
       String visibility,
-      String require_two_factor_authentication,
+      bool require_two_factor_authentication,
       String subgroup_creation_level,
       String created_at,
       String descavatar_urlription,
       String web_url,
-      String request_access_enabled,
+      bool request_access_enabled,
       String full_name,
       String full_path,
       int file_template_project_id}) = _$_GroupModel;
@@ -407,7 +407,7 @@ abstract class _GroupModel implements GroupModel {
   @override
   String get visibility;
   @override
-  String get require_two_factor_authentication;
+  bool get require_two_factor_authentication;
   @override
   String get subgroup_creation_level;
   @override
@@ -417,7 +417,7 @@ abstract class _GroupModel implements GroupModel {
   @override
   String get web_url;
   @override
-  String get request_access_enabled;
+  bool get request_access_enabled;
   @override
   String get full_name;
   @override
